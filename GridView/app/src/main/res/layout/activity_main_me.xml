@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:context=".MainActivityMe"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/thongtin_pf"
+                android:background="@drawable/bg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="20dp">
+                <TextView
+                    android:id="@+id/tennguoidung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nhóm 14"
+                    android:textColor="#000"
+                    android:textSize="30sp"
+                    android:layout_below="@+id/pr_image"
+                    android:layout_centerHorizontal="true"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/pr_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    app:civ_border_width="2dp"
+                    android:paddingTop="20dp"
+                    android:src="@drawable/sunning" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list_thongtin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"></ListView>
+
+                <ListView
+                    android:id="@+id/listView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_below="@+id/listView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"></ListView>
+
+
+
+            </RelativeLayout>
+            <Button
+                android:textColor="#ED3E3E"
+                android:id="@+id/bt_lognout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/listView1"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button"
+                android:text="Đăng xuất" />
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:backgroundTint="#fff"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_menu"
+        app:itemIconTint="@color/color_tab"
+        app:itemTextColor="@color/color_tab"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/nav_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+</RelativeLayout>
